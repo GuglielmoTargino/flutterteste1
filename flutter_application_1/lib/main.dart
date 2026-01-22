@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Icon(Icons.star),
-                  SizedBox(width: 10),
+                  SizedBox(width: 80),
                   Text('Row 1'),
                 ],
               ),
@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
                   Icon(Icons.home),
                   Icon(Icons.favorite),
                   Icon(Icons.settings),
+                  Icon(Icons.attach_file_rounded),
                 ],
               ),
 
