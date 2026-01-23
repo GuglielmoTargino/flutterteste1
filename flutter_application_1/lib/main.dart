@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 24, 23, 19),
         appBar: AppBar(
           title: const Text(
-            'Exemplo com Rows',
-            style: TextStyle(color: Color.fromARGB(255, 40, 42, 167)),
+            'Contador do Tempo',
+            style: TextStyle(color: Color.fromARGB(255, 19, 18, 19)),
           ),
           centerTitle: true,
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: const Color.fromARGB(255, 214, 126, 10),
         ),
         body: Center(
           child: Column(
