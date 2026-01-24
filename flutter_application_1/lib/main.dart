@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  String resu = "Guga aprendendo";
+
+  void Somar() {
+    resu = "Guga soma";
+  }
+
+  void Subtrair() {
+    resu = "Guga diminue";
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 102, 100, 91),
+        backgroundColor: const Color.fromARGB(255, 44, 44, 43),
         appBar: AppBar(
           title: const Text(
             'Contador do Tempo',
@@ -27,28 +37,16 @@ class MyApp extends StatelessWidget {
               // só pra empilhar as 3 Rows na vertical
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                /*
-                // ===== ROW 1 =====
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(Icons.star),
-                    SizedBox(width: 80),
-                    Text('Row 1'),
-                  ],
-                ),*/
-                const SizedBox(height: 20),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  margin: const EdgeInsets.only(bottom: 20),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(resu, style: const TextStyle(fontSize: 18)),
+                ),
 
-                /* // ===== ROW 2 =====
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Icon(Icons.home),
-                    Icon(Icons.favorite),
-                    Icon(Icons.settings),
-                    Icon(Icons.attach_file_rounded),
-                  ],
-                ),*/
                 const SizedBox(height: 20),
 
                 // ===== ROW 3 =====
@@ -56,19 +54,29 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: Somar,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 68, 167, 43),
                       ),
-                      child: Text('Start'),
+                      child: Text(
+                        'Start',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 19, 18, 19),
+                        ),
+                      ),
                     ),
                     SizedBox(width: 10),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: Subtrair,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 223, 50, 7),
                       ),
-                      child: Text('Stop'),
+                      child: Text(
+                        'Stop',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 19, 18, 19),
+                        ),
+                      ),
                     ),
                   ],
                 ),
