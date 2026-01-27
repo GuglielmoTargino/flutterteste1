@@ -21,14 +21,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 34, 34, 17),
+        backgroundColor: const Color.fromARGB(255, 16, 14, 31),
         appBar: AppBar(
           title: const Text(
             'Contador do Tempo',
             style: TextStyle(color: Color.fromARGB(255, 19, 18, 19)),
           ),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 241, 146, 3),
+          backgroundColor: const Color.fromARGB(255, 236, 221, 6),
         ),
         body: Center(
           child: Padding(
@@ -41,8 +41,10 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   margin: const EdgeInsets.only(bottom: 20),
                   decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    border: Border.all(color: Colors.white),
+                    color: const Color.fromARGB(255, 221, 224, 228),
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 26, 14, 206),
+                    ),
                     borderRadius: BorderRadius.circular(8),
                   ),
 
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
                     resu,
                     style: const TextStyle(
                       fontSize: 18,
-                      color: Color.fromARGB(255, 8, 204, 8),
+                      color: Color.fromARGB(255, 20, 20, 20),
                     ),
                   ),
                 ),
@@ -64,25 +66,28 @@ class MyApp extends StatelessWidget {
                     ElevatedButton(
                       onPressed: Somar,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 68, 167, 43),
+                        backgroundColor: const Color.fromARGB(255, 36, 151, 7),
                       ),
+
                       child: Text(
                         'Start',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 24, 12, 202),
+                          color: Color.fromARGB(255, 23, 23, 24),
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10),
+
                     ElevatedButton(
                       onPressed: Subtrair,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 223, 50, 7),
+                        backgroundColor: const Color.fromARGB(255, 235, 50, 4),
                       ),
                       child: Text(
                         'Stop',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 16, 1, 100),
+                          color: Color.fromARGB(255, 15, 15, 15),
                         ),
                       ),
                     ),
