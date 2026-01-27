@@ -21,14 +21,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 44, 44, 43),
+        backgroundColor: const Color.fromARGB(255, 34, 34, 17),
         appBar: AppBar(
           title: const Text(
             'Contador do Tempo',
             style: TextStyle(color: Color.fromARGB(255, 19, 18, 19)),
           ),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 214, 126, 10),
+          backgroundColor: const Color.fromARGB(255, 241, 146, 3),
         ),
         body: Center(
           child: Padding(
@@ -41,10 +41,18 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   margin: const EdgeInsets.only(bottom: 20),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                    color: Colors.blueGrey,
+                    border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(resu, style: const TextStyle(fontSize: 18)),
+
+                  child: Text(
+                    resu,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      color: Color.fromARGB(255, 8, 204, 8),
+                    ),
+                  ),
                 ),
 
                 const SizedBox(height: 20),
@@ -61,7 +69,7 @@ class MyApp extends StatelessWidget {
                       child: Text(
                         'Start',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 19, 18, 19),
+                          color: Color.fromARGB(255, 24, 12, 202),
                         ),
                       ),
                     ),
@@ -74,7 +82,7 @@ class MyApp extends StatelessWidget {
                       child: Text(
                         'Stop',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 19, 18, 19),
+                          color: Color.fromARGB(255, 16, 1, 100),
                         ),
                       ),
                     ),
